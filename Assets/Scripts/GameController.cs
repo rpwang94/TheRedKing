@@ -5,19 +5,23 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
-	public Text displayText;
+	public Text questionText;
+	public Text playerStatsText;
+
 	public Button choice1;
 	public Button choice2;
 	public Button choice3;
 	public Button choice4;
 
 	[HideInInspector] public CardChoiceHandler cardChoiceHandler;
-	[HideInInspector] public List<string> cardDescriptions;
+	[HideInInspector] public PlayerHandler playerHandler;
 
-	List<string> questionLog = new List<string> ();
+	[HideInInspector] public List<string> cardDescriptions;
+	[HideInInspector] public string playerStats;
 
 	void Awake() {
 		cardChoiceHandler = GetComponent<CardChoiceHandler> ();
+		playerHandler = GetComponent<PlayerHandler> ();
 	}
 
 	void Start() {
@@ -33,12 +37,10 @@ public class GameController : MonoBehaviour {
 		choice3.GetComponentInChildren<Text>().text = descriptions [2];
 		choice4.GetComponentInChildren<Text>().text = descriptions [3];
 
-		displayText.text = cardChoiceHandler.currentCard.cardText;
+		questionText.text = cardChoiceHandler.currentCard.cardText;
 
-//		string joinedText = cardChoiceHandler.currentCard.cardText + "\n" + string.Join ("\n", cardDescriptions.ToArray());
-//		questionLog.Add (joinedText + "\n");
-//	
-//		displayText.text = string.Join("\n", questionLog.ToArray());
+		playerHandler.CreatePlayerStatsString ();
+		playerStatsText.text = playerStats;
 	}
 		
 	void UnpackChoices(){

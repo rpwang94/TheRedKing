@@ -11,8 +11,7 @@ public class CardChoiceHandler : MonoBehaviour {
 	void Awake () {
 		controller = GetComponent<GameController> ();
 	}
-	
-	// Update is called once per frame
+
 	public void UnpackChoiceDescriptions(){
 		for (int i = 0; i < currentCard.choices.Length; i++) {
 			controller.cardDescriptions.Add (currentCard.choices[i].choiceText);

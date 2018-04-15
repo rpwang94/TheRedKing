@@ -55,6 +55,8 @@
      <Compile Include="Assets\Scripts\CardChoiceHandler.cs" />
      <Compile Include="Assets\Scripts\Choice.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\PlayerHandler.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>/Users/marlin2/TheRedKingGame/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
