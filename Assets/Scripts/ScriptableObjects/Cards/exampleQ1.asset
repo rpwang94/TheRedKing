@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cafb94e300dba4788b7b101495514b01, type: 3}
+  m_Name: exampleQ1
+  m_EditorClassIdentifier: 
+  cardText: One of the senior generals who has been criticising your work since the
+    beginning, is once again giving you a hard time at a council meeting, in front
+    of all your high ranking officials. How would you respond?
+  choices:
+  - choiceText: "Treat him with respect and try to convince him the good work you\u2019re
+      doing"
+    resourceModifier: 0
+    accessModifier: 0
+    unityModifier: 10
+    luckModifier: 0
+  - choiceText: Ask him for suggestions and see what he has to offer
+    resourceModifier: 0
+    accessModifier: 0
+    unityModifier: 10
+    luckModifier: 5
+  - choiceText: Ignore him and continue your speech
+    resourceModifier: 0
+    accessModifier: 5
+    unityModifier: 5
+    luckModifier: -5
+  - choiceText: Call him a cunt and pick a fight with him right there right now to
+      assert dominance
+    resourceModifier: 10
+    accessModifier: 0
+    unityModifier: 10
+    luckModifier: 0
